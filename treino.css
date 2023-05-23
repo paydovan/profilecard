@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+
+/* Configurações gerais */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+/* Config do body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(to right, #2a0042, #9300d6);
+}
+
+/* Config do cartão */
+.cartao {
+    position: relative;
+    background: #ffff;
+    height: 18vh;
+    width: 40vh;
+    border-radius: 20px;
+    box-shadow: 0 35px 70px #242424;
+    transition: 0.3s;
+}
+
+/* Config do cartão após passar o mouse */
+.cartao:hover {
+    height: 75vh;
+}
+
+.cartao:active {
+    height: 75vh;
+}
+
+/* Config do caixa da imagem */
+.boximg {
+    background: #000;
+    width: 16vh;
+    height: 16vh;
+    right: 50%;
+    top: -50px;
+    position: absolute;
+    border-radius: 70px;
+    box-shadow: 0 15px 70px;
+    overflow: hidden;
+    transition: 0.3s;
+    margin-top: 2px;
+}
+ 
+/* Config do caixa da imagem, após passar o mouse */
+.cartao:hover .boximg {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 90px;
+}
+
+/* Config do caixa da imagem, após clicar (usado para tablets e celulares) */
+.cartao:active .boximg {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 80px;
+}
+
+/* Imagem prorpiamente dita*/
+.boximg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartao .conteudo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.cartao .conteudo .detalhes {
+    padding: 10px;
+    text-align: center;
+    width: 82%;
+    transition: 0.3s;
+    transform: translateY(86%);
+}
+
+.cartao:hover .conteudo .detalhes {
+    transform: translateY(0px);
+}
+
+.cartao .conteudo .detalhes h2 {
+    font-size: 1.25em;
+    line-height: 1.2em;
+}
+
+.cartao .conteudo .detalhes span {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.7;
+}
+
+.timeline-data {
+    font-weight: bold;
+    margin: 1px;
+}
+
+.linha1 {
+    content: '';
+    position: absolute;
+    background: #000;
+    height: 118px;
+    width: 1px;
+    left: -1.7%;
+    top: 19%;
+}
+
+.linha2 {
+    content: '';
+    position: absolute;
+    background: #000;
+    height: 78px;
+    width: 1px;
+    left: -1.7%;
+    top: 52%;
+}
